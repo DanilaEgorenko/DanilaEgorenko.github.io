@@ -1,1 +1,1 @@
-# DanilaEgorenko.github.io
+# Domain purchased and used by Danila Egorenko.
