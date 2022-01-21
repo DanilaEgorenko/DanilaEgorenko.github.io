@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<!-- Powered by Danila Egorenko -->
+<head>
+	<meta charset="utf-8"/>
+	<title>Avengers: Brawl Stars</title>
+	<link href="club.png" rel="shortcut icon" type="html5">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="Avengers.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<h1>Avengers</h1>
+		<div class="fullscreen">
+			<video class="fullscreen-video" src="Avengers.mp4" autoplay muted loop></video>
+		</div>
+		<section>
+			<div class="inner">
+				<div class="icon"></div>
+				<a href="https://link.brawlstars.com/invite/band/ru?tag=2YLRYQRP" alt="Приглашение в клуб">Вступай в клуб</a>
+				<p>Avengers - это больше, чем клуб... Brawl Stars - больше, чем игра... Играй, развивайся, советуйся в клубе, входящем в сотню лучших клубов России!</p>
+			</div>
+		</section>
+		<section>
+			<div class="inner">
+				<div class="icon"></div>
+				<a href="https://vk.me/join/AJQ1d1PJiBQ90596SMZLPSCy" alt="Приглашение в беседу">Заходи в беседу</a>
+				<p>Avengers - это самые общительные, интересные и целеустремлённые участники. Общайся и делись своим мнением в беседе! Тебе здесь будут рады!</p>
+			</div>
+		</section>
+		<section>
+			<div class="inner">
+				<div class="icon">?</div>
+				<a href="https://vk.com/marvel_fox" alt="Президент клуба">Задай вопрос</a>
+				<p>Avengers - быстро развивающийся клуб. Если у вас есть вопрос касательно клуба или вы хотите узнать почему вас выгнали, то обязательно спросите.</p>
+			</div>
+		</section>
+		<section>
+			<div class="inner">
+				<div class="icon"></div>
+				<a href="https://discord.gg/6VkpKah" alt="Discord">Зайди в Discord</a>
+				<p>У клуба Avengers теперь есть свой Discord, в котором мы обсуждаем обновления, собираемся на фан-сходки и просто общаемся. Мы будем рады пообщаться с тобой.</p>
+			</div>
+		</section>
+		<div class="modal" onclick="closeNotification();">
+			<div class="notification">
+				<div class="close" onclick="closeNotification();"></div>
+				<a href="https://bestboostsite.github.io" alt="BestBoost">Заказать буст</a>
+				<p>Мало трофеев для нахождения в клубе? Не беда! Наши вице-президенты с радостью помогут поднять тебе трофеи. Участникам клуба - скидка 20%.</p>
+			</div>
+		</div>
+</body>
+<script>
+	function closeNotification(){
+		var notification = document.querySelector('.notification');
+		var modal = document.querySelector('.modal');
+		modal.style.display = 'none';
+		notification.style.display = 'none';
+}
+</script>
+</html>
