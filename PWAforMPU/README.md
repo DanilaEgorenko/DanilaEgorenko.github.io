@@ -1,6 +1,10 @@
-<h2>This project is PWA for Moscow Polytechnic University by Danila Egorenko.</h2>
+<h2>Это проект внедрения PWA (Прогрессивного Веб-приложения) для Московмкого политехнического университета.</h2>
 
-<p>To add PWA add that line to tag <strong>head</strong>:</p>
+<p>Чтобы добавить PWA на сайт МПУ нужно только добавить этот скрипт в тег <strong>head</strong>:</p>
 <pre>
 <script src="pwa.js"></script>
 </pre>
+
+Дата: Сентябрь 2021
+
+https://pwaformpu.github.io/
