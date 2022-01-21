@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Агентство недвижимости в Брянске Седьмое небо</title>
+    <link href="logo.png" rel="shortcut icon" type="html5">
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
+    <!-- VK Widget -->
+    <div id="vk_community_messages"></div>
+    <script type="text/javascript">
+        VK.Widgets.CommunityMessages("vk_community_messages", 137132646, { expandTimeout: "5000", disableExpandChatSound: "1", tooltipButtonText: "Есть вопрос?" });
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(71139910, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/71139910" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
+
+<body>
+    <header>
+        <a href="https://7nebobryansk.github.io">
+            <img src="logo.png" alt="Седьмое небо">
+        </a>
+        <nav>
+            <a id="contacts_href_2" href="#price">Услуги</a>
+            <a id="contacts_href_1" href="#contacts">Контакты</a>
+        </nav>
+    </header>
+    <div class="fullscreen_video">
+        <h2>Агентство недвижимости</h2>
+        <h1>Седьмое небо</h1>
+        <video class="fullscreen_video-el" src="fs.mp4" autoplay muted loop></video>
+    </div>
+
+    <section id="price">
+        <div class="price">
+            <h2>Наши услуги</h2>
+            <p>С нами вы можете быть спокойны по поводу качества и сроков исполнения</p>
+        </div>
+        <div class="price">
+            <h3>Посуточная и долгосрочная аренда</h3>
+            <ul>
+                <li>Коттеджи</li>
+                <li>Дома</li>
+                <li>Квартиры</li>
+                <li>Коммерческие помещения</li>
+            </ul>
+            <div class="bg"></div>
+        </div>
+        <div class="price">
+            <h3>Все виды страхования</h3>
+            <ul>
+                <li>Жизнь</li>
+                <li>Имущество</li>
+                <li>Риски</li>
+                <li>Визы</li>
+            </ul>
+            <div class="bg"></div>
+        </div>
+        <div class="price">
+            <h3>Диагностические карты</h3>
+            <p>Поможем пройти техосмотр быстро и без проблем</p>
+            <div class="bg"></div>
+        </div>
+        <div class="price">
+            <h3>Оформление Шенгенской визы</h3>
+            <ul>
+                <li>Быстрое оформление</li>
+                <li>Оперативные сроки</li>
+                <li>Полное сопровождение</li>
+            </ul>
+            <div class="bg"></div>
+        </div>
+    </section>
+
+    <footer id="contacts">
+        <h2>Контакты</h2>
+        <a href="https://goo.gl/maps/rBzPx5mH7gBZMyNu6" alt="Адрес">г.Брянск ул.Фокина д.2 офис 7, 241050</a>
+        <a href="tel:+7-900-356-81-81">+7-900-356-81-81</a>
+        <a href="tel:+7-919-199-52-72">+7-919-199-52-72</a>
+        <a href="mailto:7nebo2020@list.ru">7nebo2020@list.ru</a>
+        <div class="icons">
+            <a href="https://vk.com/dalnaydacha32">
+                <img src="vk.png" alt="Сообщество ВК">
+            </a>
+            <a href="https://www.instagram.com/natasha120986/">
+                <img src="inst.png" alt="Instagram">
+            </a>
+        </div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d844.2303173086896!2d34.37098846250001!3d53.2385739616285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x412d58f1a30aeba7%3A0xd7591df0380ca3a5!2z0YPQuy4g0KTQvtC60LjQvdCwLCAyLCDQkdGA0Y_QvdGB0LosINCR0YDRj9C90YHQutCw0Y8g0L7QsdC7LiwgMjQxMDUw!5e0!3m2!1sru!2sru!4v1610208623496!5m2!1sru!2sru"
+            frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+        </iframe>
+    </footer>
+
+    <script>
+        function fc() {
+            let nav = document.querySelector('.fullscreen_video');
+            let header = document.querySelector('header');
+            if (window.pageYOffset > 10) {
+                nav.classList.add('scroll-hidden');
+                header.classList.add('scroll-hidden');
+            } else {
+                nav.classList.remove('scroll-hidden');
+                header.classList.remove('scroll-hidden');
+            }
+        }
+        window.onscroll = fc;
+        fc();
+    </script>
+</body>
+
+</html>
