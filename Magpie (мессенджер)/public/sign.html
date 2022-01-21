@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Войти в Magpie</title>
+    <link rel="shortcut icon" href="images/favicon.jpg" type="html5">
+    <link rel="preload" href="theme.js" as="script">
+    <link rel="stylesheet" href="main.css">
+    <meta name="theme-color" content="#222226" />
+</head>
+
+<body>
+    <div class="sign" onclick="signIn()">
+        <div class="view">
+            <h1>Войти в Magpie с помощью</h1>
+            <img src="images/google.png">
+        </div>
+    </div>
+    <style>
+        body {
+            background-color: var(--main-bg-color);
+            color: var(--color);
+        }
+
+        .sign {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .view {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            border-radius: 10px;
+            box-sizing: border-box;
+            padding-left: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        img {
+            height: 90px;
+            width: 90px;
+        }
+    </style>
+    <script src="/__/firebase/7.24.0/firebase-app.js"></script>
+    <script src="/__/firebase/7.24.0/firebase-analytics.js"></script>
+    <script src="/__/firebase/7.24.0/firebase-auth.js"></script>
+    <script src="/__/firebase/7.24.0/firebase-storage.js"></script>
+    <script src="/__/firebase/7.24.0/firebase-messaging.js"></script>
+    <script src="/__/firebase/7.24.0/firebase-firestore.js"></script>
+    <script src="/__/firebase/7.24.0/firebase-performance.js"></script>
+    <script src="/__/firebase/init.js?useEmulator=true"></script>
+    <script>
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                window.location.href = 'index.html';
+            }
+        });
+        if (localStorage.getItem('theme') == 'dark') {
+            document.documentElement.style.setProperty('--main-bg-color', '#222226');
+            document.documentElement.style.setProperty('--color', '#bbb');
+        } else {
+            document.documentElement.style.setProperty('--main-bg-color', 'white');
+            document.documentElement.style.setProperty('--color', 'black');
+        }
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>

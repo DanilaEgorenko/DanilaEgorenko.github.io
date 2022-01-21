@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!-- Powered by Danila Egorenko -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magpie</title>
+  <link rel="shortcut icon" href="images/favicon.jpg" type="html5">
+
+  <link rel="manifest" href="a2hs.webmanifest" crossorigin="use-credentials">
+  <meta name="theme-color" content="#222226" />
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <link rel="script preload" href="theme.js" as="script">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <header>
+    <h1>Magpie</h1>
+    <div class="menu-icon-wrapper">
+      <div class="menu-icon"></div>
+    </div>
+  </header>
+
+  <div id="activity-card-container">
+    <div id="activity-card">
+      <div class="chats"></div>
+      <button class="blue_button" id="add-chat">Добавить чат</button>
+      <div class="add-chat-display">
+        <div id="search-close" class="close">x</div>
+        <h1>Создать:</h1>
+        <input id="createInputChat" type="text" placeholder="Имя чата">
+        <div class="block-radio">
+          <input type="radio" id="chat" name="chat" value="chat" checked>
+          <label for="chat">Чат</label>
+          <input type="radio" id="channel" name="chat" value="channel">
+          <label for="channel">Канал</label>
+        </div>
+        <form id="chat-image-form" action="#">
+          <input id="chatMediaCapture" type="file" accept="image/*">
+          <button id="chatSubmitImage"></button>
+        </form>
+        <button class="blue_button" id="create-chat">Создать чат</button>
+        <h1>Найти:</h1>
+        <input id="input-add" type="number" placeholder="Введитe ID чата...">
+        <button class="blue_button" id="addId">Найти</button>
+      </div>
+      <div class="chatView">
+        <div id="chat-close" class="close">x</div>
+        <div id="chat-pic"></div>
+        <div id="chat-name"></div>
+        <div id="chat-cid"></div>
+        <div id="chat-type"></div>
+        <div id="chat-users">
+        </div>
+        <button class="blue_button" id="sign-chat">Присоединиться</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="messages-card-container">
+    <div id="load" class="active">
+      <div id="loader"></div>
+    </div>
+    <div id="messages-card">
+      <div id="messages"></div>
+      <form id="message-form" action="#">
+        <div class="textfield">
+          <input class="textfield__input" type="text" id="message" autocomplete="off" placeholder="Напишите...">
+        </div>
+        <button id="submit" disabled type="submit"></button>
+      </form>
+      <form id="image-form" action="#">
+        <input id="mediaCapture" type="file" accept="image/*">
+        <button id="submitImage"></button>
+      </form>
+    </div>
+  </div>
+
+  <div id="user-card-container">
+    <div hidden id="user-pic"></div>
+    <div hidden id="user-name"></div>
+    <input id="input-name">
+    <button id="edit-name">Изменить</button>
+    <button class="blue_button" hidden id="sign-out">Выйти</button>
+    <button class="blue_button" id="sign-in">Войти</button>
+    <p class="profileId"></p>
+    <label id="theme">
+      <div class="theme-text">Тёмная тема</div>
+      <input type="checkbox" id="box">
+      <span class="check"></span>
+    </label>
+    <button id="delete-user">Удалить профиль</button>
+  </div>
+
+  <div class="notification">
+    <h2 class="notification-text"></h2>
+  </div>
+
+  <script defer src="/__/firebase/7.24.0/firebase-app.js"></script>
+  <script defer src="/__/firebase/7.24.0/firebase-analytics.js"></script>
+  <script defer src="/__/firebase/7.24.0/firebase-auth.js"></script>
+  <script defer src="/__/firebase/7.24.0/firebase-storage.js"></script>
+  <script defer src="/__/firebase/7.24.0/firebase-database.js"></script>
+  <script defer src="/__/firebase/7.24.0/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/7.24.0/firebase-firestore.js"></script>
+  <script defer src="/__/firebase/7.24.0/firebase-performance.js"></script>
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+  <script defer src="main.js"></script>
+</body>
+
+</html>

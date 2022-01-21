@@ -1,0 +1,36 @@
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /messages/{messageId} {
+      allow read;
+      allow delete: if request.auth != null;
+      allow create, update, delete: if request.auth != null
+                    && request.resource.data.name == request.auth.token.name
+                    && (request.resource.data.text is string
+                      && request.resource.data.text.size() <= 500
+                      || request.resource.data.imageUrl is string
+                      && request.resource.data.imageUrl.matches('https?://.*'));
+    }
+    // FCM Tokens:
+    //   - Anyone can write their token.
+    //   - Reading list of tokens is not allowed.
+    match /fcmTokens/{token} {
+      allow read: if false;
+      allow write;
+    }
+  }
+}
+
+// Returns true if the uploaded file is an image and its size is below the given number of MB.
+function isImageBelowMaxSize(maxSizeMB) {
+  return request.resource.size < maxSizeMB * 1024 * 1024
+      && request.resource.contentType.matches('image/.*');
+}
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{userId}/{messageId}/{fileName} {
+      allow write: if request.auth != null && request.auth.uid == userId && isImageBelowMaxSize(5);
+      allow read;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magpie</title>
+</head>
+
+<body>
+    <h1>К сожалению, у вас нет подключения к сети.</h1>
+    <button onclick="offline()">Попробовать ещё раз</button>
+    <style>
+        body {
+            background-color: #222;
+            color: white;
+            text-align: center;
+        }
+
+        button {
+            background: #222226;
+            color: white;
+            border: 2px solid black;
+            border-radius: 5px;
+            height: 40px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                position: absolute;
+                bottom: 20px;
+            }
+        }
+    </style>
+    <script>
+        function offline() {
+            window.addEventListener("online", function () {
+                if (true) {
+                    window.location.href = 'index.html';
+                } else {
+                    window.location.reload();
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
