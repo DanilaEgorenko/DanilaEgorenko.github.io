@@ -1,1 +1,1 @@
-# Domain purchased and used by Danila Egorenko.
+# Danila Egorenko.
