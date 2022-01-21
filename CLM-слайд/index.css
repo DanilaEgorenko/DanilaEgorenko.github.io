@@ -1,0 +1,404 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Arial";
+    src: url("./assets/fonts/arial.ttf");
+   }
+@font-face {
+    font-family: "Din Condensed Bold";
+    src: url("./assets/fonts/Din\ Condensed\ Bold.otf");
+}
+.container {
+    height: 768px;
+    width: 1024px;
+    position: relative;
+    letter-spacing: -1px;
+    overflow: hidden;
+}
+.container_day {
+    height: 768px;
+    width: 1024px;
+    background-image: url("./assets/bg_Landscape_day/BG.png");
+    background-size: contain;
+    position: absolute;
+    animation: change 2s 7.5s forwards linear;
+    opacity: 1;
+    z-index: 1;
+}
+.container_night {
+    height: 768px;
+    width: 1024px;
+    background-image: url("./assets/bg_Landscape_night/BG.png");
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: change_rev 2s 7.5s forwards linear;
+    overflow: hidden;
+    opacity: 0;
+    z-index: 1;
+}
+@keyframes change {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes change_rev {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.ref {
+    background-image: url("./assets/template/ref_n_a.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 35px;
+    left: 20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    appearance: none;
+    border: 0;
+    z-index: 1000;
+    cursor: pointer;
+}
+.ref.on {
+    background-image: url("./assets/template/ref.png");
+}
+.atoris_logo {
+    background-image: url("./assets/template/Atoris_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    width: 110px;
+    height: 30px;
+    z-index: 100;
+}
+.home {
+    background-image: url("./assets/template/home.png");
+    background-size: contain;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    width: 35px;
+    height: 35px;
+    z-index: 100;
+}
+.krka_logo {
+    background-image: url("./assets/template/KRKA_logo.png");
+    background-size: contain;
+    position: absolute;
+    background-repeat: no-repeat;
+    bottom: 35px;
+    right: 0;
+    z-index: 100;
+    width: 110px;
+    height: 40px;
+}
+.ref_active {
+    height: 100%;
+    width: 1024px;
+    background-image: url("./assets/ref_active/grey.png");
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    z-index: 100;
+    opacity: 0;
+}
+.ref_active.on {
+    opacity: 1;
+}
+.rect {
+    height: 125px;
+    width: 70%;
+    background-image: url("./assets/ref_active/rect.png");
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    font-family: "Arial";
+    padding: 40px;
+}
+.sun_glow_1 {
+    animation: sun 30s .5s linear forwards,
+    out 2s 7.5s forwards ease-in-out;
+    animation-play-state: running, running;
+}
+@keyframes sun {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.sun_glow_1 {
+    height: 210px;
+    width: 210px;
+    background-image: url("./assets/bg_Landscape_day/Sun_glow.png");
+    background-size: contain;
+    position: absolute;
+    top: -40px;
+    left: 150px;
+    z-index: 100;
+}
+@keyframes out {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+.stars {
+    background-image: url("./assets/bg_Landscape_night/Stars.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50%;
+    width: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: stars 3s 7s forwards linear;
+    opacity: 0;
+    z-index: 100;
+}
+@keyframes stars {
+    to {
+        opacity: 1;
+    }
+}
+.clouds {
+    background-image: url("./assets/clouds.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: -100%;
+    animation: clouds 15s 1.5s forwards linear;
+    z-index: 10;
+}
+@keyframes clouds {
+    to {
+        left: 0;
+    }
+}
+.brand_1,
+.brand_2 {
+    font-size: 55px;
+    position: absolute;
+    bottom: 265px;
+    animation: brands 2s .5s forwards;
+    z-index: 100;
+}
+@keyframes brands {
+    0% {
+        bottom: 265px;
+        opacity: 1;
+    }
+    100% {
+        bottom: 465px;
+        opacity: 0;
+    }
+}
+.brand_1 {
+    left: 200px;
+    color: #585859;
+    z-index: 100;
+}
+.brand_2 {
+    left: 700px;
+    color: #2f56a6;
+    z-index: 100;
+}
+.mnn {
+    font-size: 17.5px;
+    width: 140px;
+    position: absolute;
+    bottom: 70px;
+    left: 160px;
+    text-align: center;
+    z-index: 10;
+}
+.lights {
+    background-image: url("./assets/lights.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 180px;
+    width: 1782px;
+    position: absolute;
+    top: 60px;
+    left: -200px;
+    opacity: 0;
+    animation: lights 3s 7.5s forwards linear;
+    z-index: 10;
+}
+@keyframes lights {
+    to {
+        opacity: 1;
+    }
+}
+.tower {
+    background-image: url("./assets/Lighthouse_day.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 100px;
+    width: 290px;
+    position: absolute;
+    bottom: 45px;
+    left: 630px;
+    display: flex;
+    justify-content: center;
+    animation: tower 5s 2s forwards ease-in-out;
+    z-index: 10;
+}
+@keyframes tower {
+    0% {
+        height: 100px;
+    }
+    20% {
+        height: 160px;
+    }
+    40% {
+        height: 245px;
+    }
+    60% {
+        height: 345px;
+    }
+    80% {
+        height: 420px;
+    }
+    100% {
+        height: 660px;
+    }
+}
+.tower::after {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    background-image: url("./assets/Lighthouse_night.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 768px;
+    width: 290px;
+    bottom: 0;
+    left: 0;
+    animation: tower_after 2s 7.5s forwards linear;
+    z-index: 10;
+}
+@keyframes tower_after {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.part:nth-child(1) {
+    bottom: 25px;
+    animation: opacity 1s 1.5s forwards;
+}
+.part:nth-child(2) {
+    bottom: 100px;
+    animation: opacity 1s 2.5s forwards;
+}
+.part:nth-child(3) {
+    bottom: 190px;
+    animation: opacity 1s 3.5s forwards;
+}
+.part:nth-child(4) {
+    bottom: 270px;
+    animation: opacity 1s 4.5s forwards;
+}
+.part:nth-child(5) {
+    bottom: 370px;
+    animation: opacity 1s 5.5s forwards;
+}
+.part:nth-child(6) {
+    bottom: 450px;
+    animation: opacity 1s 6.5s forwards;
+}
+.part:nth-child(1),
+.mnn {
+    animation: part_1 .5s 1.5s forwards;
+    opacity: 0;
+}
+@keyframes part_1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #2b4f98;
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    z-index: 100;
+}
+.icon {
+    height: 35px;
+    width: 80px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.part span {
+    font-family: "Din Condensed Bold";
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+}
+.part p {
+    font-family: "Arial";
+    font-size: 13px;
+}
+.ic_1 {
+    background-image: url("./assets/icons/KRKA.png");
+}
+.ic_2 {
+    background-image: url("./assets/icons/icon1.png");
+}
+.ic_3 {
+    background-image: url("./assets/icons/icon2.png");
+}
+.ic_4 {
+    background-image: url("./assets/icons/icon3.png");
+}
+.ic_5 {
+    background-image: url("./assets/icons/icon4.png");
+}
+.ic_6 {
+    background-image: url("./assets/icons/icon5.png");
+}
